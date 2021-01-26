@@ -107,7 +107,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `oiee @${num.split('@')[0]}\ seja bem vindo/a ao grupo *${mdata.subject}* comportasse para nao ganha ban`
+				teks = `oiee @${num.split('@')[0]}\ SEJA BEM VINDO AO GRUPO *${mdata.subject}* LEIA AS REGRAS PARA EVITAR SER BANIDO`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -117,7 +117,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `xauu pessoa @${num.split('@')[0]} quem sabe possa voltar`
+				teks = `@${num.split('@')[0]} SAIU DO GRUPO, QUEM ESPANTOU?`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -437,7 +437,7 @@ case 'lofi':
 							.toFormat('webp')
 							.save(ran)
 					} else {
-						reply(`sapoha ${prefix}sticker e pra fazer fig cm foto/gif burro`)
+						reply(`sapoha ${prefix}ALGO ERRADO AI, TENTA DENOVO`)
 					}
 					break
 				case 'gtts':	
@@ -445,7 +445,7 @@ case 'lofi':
 				case 'audio':
 					if (args.length < 1) return client.sendMessage(from, 'idioma e nescessario!!', text, {quoted: mek})
 					const gtts = require('./lib/gtts')(args[0])
-					if (args.length < 2) return client.sendMessage(from, 'qual txt vc quer q eu fale lindu?', text, {quoted: mek})
+					if (args.length < 2) return client.sendMessage(from, 'QUAL É O TEXTO??', text, {quoted: mek})
 					dtt = body.slice(9)
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
