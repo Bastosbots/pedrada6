@@ -1,5 +1,5 @@
 
-const cmd = (prefix) => { 
+const help = (prefix) => { 
 	return `                 
  <══════════════════════>
  ●-------BAST MOD-------●
