@@ -1,5 +1,5 @@
 
-const help = (prefix) => { 
+const cmd = (prefix) => { 
 	return `                 
  <══════════════════════>
  ●-------BAST MOD-------●
@@ -15,8 +15,6 @@ CRIADOR: @5569985001678
 ╠══════════════════════
 ║    🔵CRIADOR🔵
 ║╭─────────────────────
-║🔵 ${prefix}sticker
-║🔵 ${prefix}stiker
 ║🔵 ${prefix}fig
 ║🔵 ${prefix}figurinha
 ║CRIA STICKER (FOTO/VIDEO/GIF)
@@ -28,16 +26,13 @@ CRIADOR: @5569985001678
 ║🔵 ${prefix}pokemon
 ║POKEMON ALEATÓRIO
 ║├─────────────────────
-║🔵 ${prefix}tts
+║🔵 ${prefix}tts pt frase
 ║AUDIO RESENHA
 ║├─────────────────────
 ║🔵 ${prefix}info
 ║INFORMAÇÕES DO BOT
 ║   🔴ADMINISTRATIVO🔴
 ║╭─────────────────────
-║🔴 ${prefix}welcome [0/1]
-║🔴 ${prefix}bv [0/1]
-║🔴 ${prefix}bemvindo [0/1]
 ║🔴 ${prefix}boasvindas [0/1]
 ║MENSAGEM DE BOAS VINDAS OFF/ON
 ║├─────────────────────
@@ -51,41 +46,31 @@ CRIADOR: @5569985001678
 ║REMOVE MEMBRO
 ║├─────────────────────
 ║🔴 ${prefix}promote @membro
-║🔴 ${prefix}promover @membro
 ║PROMOVE MEMBRO
 ║├─────────────────────
 ║🔴 ${prefix}demote @adm
-║🔴 ${prefix}promover @adm
 ║REBAIXA MEMBRO
 ║├─────────────────────
-║🔴 ${prefix}grup abrir/fechar
-║🔴 ${prefix}group abrir/fechar
 ║🔴 ${prefix}grupo abrir/fechar
 ║ABRIR/FECHAR GRUPO
 ║├─────────────────────
-║🔴 ${prefix}setname seu txt
-║🔴 ${prefix}mudarnome seu txt
+║🔴 ${prefix}mudarnome nome
 ║TROCAR NOME DO GRUPO
 ║├─────────────────────
-║🔴 ${prefix}setdesc seu txt
 ║🔴 ${prefix}mudardesc seu txt
-║├────> troca descrição
+║TROCAR DESCRIÇÃO DO GRUPO
 ║├─────────────────────
 ║🔴 ${prefix}mudarfoto
 ║ALTERAR FOTO DO GRUPO 
 ║├─────────────────────
-║🔴 ${prefix}marcar
-║├────> marcação
-║├─────────────────────
-║🔴 ${prefix}marcar2
-║├────> marcação
-║├─────────────────────
-║🔴 ${prefix}marcar3
+║🔴 ${prefix}chamada
 ║MARCAR MEMBROS
 ║├─────────────────────
 ║⚪ SUPORTE ⚪
-║⚪ ${prefix}bug
-║REPORTAR BUG AO CRIADOR
+║⚪ ${prefix}reportar
+║CONVOCA ADMINISTRADORES
+║⚪ ${prefix}reportarus @
+║REPORTAR USUÁRIO AO CRIADOR
 ╚══════════════════════
     ╲    ╱    ●BOT DO HOSPÍCIO●
  ╱▔▔▔▔▔╲       
