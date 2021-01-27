@@ -275,7 +275,7 @@ case 'lofi':
                     client.sendMessage('5511973027044@s.whatsapp.net', options, text, {quoted: mek})
                     reply('PDP PARÇA, USUÁRIO REPORTADO,VOU INVESTIGAR🙄✌🏼')
                     break
-					case 'marcar':
+					case 'marcars':
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -285,7 +285,7 @@ case 'lofi':
 					}
 					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
 					break
-                   case 'marcar2':
+                   case 'marcars2':
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -295,7 +295,7 @@ case 'lofi':
 					}
 					reply(teks)
 					break
-                  case 'marcar3':
+                  case 'chamada':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
