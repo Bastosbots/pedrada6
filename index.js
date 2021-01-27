@@ -107,7 +107,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `oiee @${num.split('@')[0]}\ SEJA BEM VINDO AO GRUPO *${mdata.subject}* LEIA AS REGRAS PARA EVITAR SER BANIDO`
+				teks = `OPA @${num.split('@')[0]}\ SEJA BEM VINDO(A) AO GRUPO *${mdata.subject}* LEIA AS REGRAS PARA EVITAR SER BANIMENTO`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -261,19 +261,19 @@ case 'lofi':
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
-                case 'bug':
-                case 'reportar':
+                case 'reportus':
+                case 'reportarttt':
                 case 'reportarbug':
                      const pesan = body.slice(5)
                       if (pesan.length > 300) return client.sendMessage(from, 'Desculpe, o texto é muito longo, máximo de 300 letras', msgType.text, {quoted: mek})
                         var nomor = mek.participant
-                       const teks1 = `*[BUG REPORTADO]*\nNumero : @${nomor.split("@s.whatsapp.net")[0]}\nMOTIVO : ${pesan}`
+                       const teks1 = `*[USUÁRIO REPORTADO]*\nNumero : @${nomor.split("@s.whatsapp.net")[0]}\nMOTIVO : ${pesan}`
                       var options = {
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
                     client.sendMessage('5511973027044@s.whatsapp.net', options, text, {quoted: mek})
-                    reply('PDP PARÇA, BUG FOI REPORTADO, SE FOR MENTIRA VAI SER COBRADO🙄✌🏼')
+                    reply('PDP PARÇA, USUÁRIO REPORTADO,VOU INVESTIGAR🙄✌🏼')
                     break
 					case 'marcar':
 					members_id = []
@@ -562,10 +562,10 @@ case 'lofi':
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (args[0] === 'abrir') {
-					    reply(`grupo aberto para membros`)
+					    reply(`GRUPO ABERTO PARA MEMBROS`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, false)
 					} else if (args[0] === 'fechar') {
-						reply(`grupo fechado SOMENTE ADM'S MANDA MSGS`)
+						reply(`GRUPO FECHADO SOMENTE ADM'S MANDA MSGS`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
 					break
@@ -610,7 +610,7 @@ case 'lofi':
 						mentions(teks, mentioned, true)
 						client.groupDemoteAdmin(from, mentioned)
 					} else {
-						mentions(`nao mamou o bonde direitinho perde adm @${mentioned[0].split('@')[0]} seu gay`, mentioned, true)
+						mentions(`Hmm @${mentioned[0].split('@')[0]} não é mais um administrador.`, mentioned, true)
 						client.groupDemoteAdmin(from, mentioned)
 					}
 					break
@@ -630,7 +630,7 @@ case 'lofi':
 						mentions(teks, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					} else {
-						mentions(`NOVO ADM NESSA PORRA @${mentioned[0].split('@')[0]} VAMO REXPEITAR OU VAI TOMAR PEDRADA`, mentioned, true)
+						mentions(`NOVO ADM NO GRUPO: @${mentioned[0].split('@')[0]} VAMO REXPEITAR OU VAI TOMAR PEDRADA`, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break	
@@ -645,21 +645,21 @@ case 'lofi':
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `removi mermo fodassi 🏃 :\n`
+							teks += `Removi mermo fodassi 🏃 :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`removi mermo @${mentioned[0].split('@')[0]} fodassi🏃`, mentioned, true)
+						mentions(`Removi mermo @${mentioned[0].split('@')[0]} fodassi🏃`, mentioned, true)
 						client.groupRemove(from, mentioned)
 					}
 					break
-				case 'listadmin':
-				case 'listaadms':
-				case 'adms':
+				case 'reportar':
+				case 'kakakaka':
+				case 'kakaka':
 					if (!isGroup) return reply(mess.only.group)
-					teks = `adms do grupo *${groupMetadata.subject}*\nadms : ${groupAdmins.length}\n\n`
+					teks = `CONVOCANDO ADMINS DO GRUPO *${groupMetadata.subject}*\nADMs: ${groupAdmins.length}\n\n`
 					no = 0
 					for (let admon of groupAdmins) {
 						no += 1
