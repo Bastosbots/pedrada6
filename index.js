@@ -116,7 +116,7 @@ client.on('group-participants-update', async (anu) => {
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
 		}
-	})
+	}
 	client.on('CB:Blocklist', json => {
 		if (blocked.length > 2) return
 	    for (let i of json[1].blocklist) {
