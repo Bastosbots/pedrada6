@@ -113,11 +113,9 @@ client.on('group-participants-update', async (anu) => {
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
 				try {
-					ppimg = await client.getProfilePicture(`${num.split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+
 				}
-				teks = `@${num.split('@')[0]} SAIU DO GRUPO, QUEM ESPANTOU?`
+				teks = `@${num.split('@')[0]} SAIU DO GRUPO.`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -699,29 +697,28 @@ case 'lofi':
 						reply(' *use o 0 para desativar e o 1 para ativar* \nexemplo: nsfw 1')
 					}
 					break
-				case 'welcome':
+				case 'welcomezz':
 				case 'bv':
-				case 'bemvindo':
-				case 'boasvindas':
+				case 'bemvindozz':
+				case 'boasvindazzs':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('1 ou 0')
 					if (Number(args[0]) === 1) {
-						if (isWelkom) return reply('ativado !!!')
+						if (isWelkom) return reply('Entendido')
 						welkom.push(from)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-						reply('❬ pronto ❭')
+						reply('❬ Entendido ❭')
 					} else if (Number(args[0]) === 0) {
 						welkom.splice(from, 1)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-						reply('❬ pronto ❭ ')
+						reply('❬ Entendido ❭ ')
 					} else {
-						reply(' *use 1 para ativar ou 0 para desativar* \n *exemplo: ${prefix}welcome 1*')
+						reply(' *Use 1 para ativar ou 0 para desativar* \n *exemplo: ${prefix}bv 1*')
 					}
 				case 'clone':
 				case 'clonar':
 					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply(' *quem e tu? ?') 
 					if (args.length < 1) return reply(' *TAG do membro clonada!* ')
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
