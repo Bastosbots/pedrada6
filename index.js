@@ -110,13 +110,11 @@ client.on('group-participants-update', async (anu) => {
 				teks = `OPA @${num.split('@')[0]}\ SEJA BEM VINDO(A) AO GRUPO *${mdata.subject}* LEIA AS REGRAS PARA EVITAR SEU BANIMENTO`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-			} else if (anu.action == 'remove') {
-				num = anu.participants[0]
-				try {
+			}
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
 		}
-	}
+	})
 	client.on('CB:Blocklist', json => {
 		if (blocked.length > 2) return
 	    for (let i of json[1].blocklist) {
@@ -277,7 +275,7 @@ case 'lofi':
 					}
 					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
 					break
-                   case 'marcars2':
+                   case 'remoção':
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -287,7 +285,7 @@ case 'lofi':
 					}
 					reply(teks)
 					break
-                  case 'chamada':
+                  case 'derrubada':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
